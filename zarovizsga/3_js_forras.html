@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	/*<!-- Ide jön  a feladat megoldása... --*/
+	
+	function kivalogatParosOtven(){
+
+		var szamok = [1, 5, 12, 50, 101]
+		var otvenfelettiparosak = []
+
+
+		for(var i = 0; i < szamok.length; i++){
+
+			if(szamok[i] % 2 == 0 && szamok[i] > 50){
+
+				otvenfelettiparosak.push(szamok[i])
+			}
+		}
+
+
+		return otvenfelettiparosak
+	}
+
+
+
+	function aBetukSzamaDiv(){
+
+		var betuhalmaz = document.getElementById("szavak").innerHTML
+		var db = 0;
+		
+		
+
+		for(var i = 0; i < betuhalmaz.length; i++){
+
+			if(betuhalmaz[i] == "a"){
+
+				db++;
+			}
+		}
+
+		return db;
+
+	}
+
+
+    
+
+	function osszeadasFeliras(eredmeny, num1, num2) {
+    
+	
+	num1 = Number(num1);
+    num2 = Number(num2);
+    eredmeny = document.querySelector("div.eredmeny");
+	var osszeg = num1 + num2;
+	var paragraph= document.createElement('p');
+    paragraph.innerHTML = `${num1}+${num2}=${osszeg}`;
+	eredmeny.appendChild(paragraph);
+	
+	
+
+}
+
+
+	
+	/*<!-- Idáig --*/
+	</script>
+	<script src="testBaseUnit.js"></script>
+	
+</head>
+<body>
+	
+    <div id="szavak" class="eredmeny">
+
+
+
+
+	</div>
+
+	
+
+	
+
+	
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
